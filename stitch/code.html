@@ -1,0 +1,368 @@
+<!DOCTYPE html><html class="light" lang="ko"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Four:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        tertiary: "#5e605a",
+                        "surface-variant": "#dee4e0",
+                        "surface-container": "#ecefec",
+                        "on-surface": "#2d3432",
+                        "surface-bright": "#f9f9f7",
+                        "primary-container": "#e5e2e1",
+                        "on-primary-fixed-variant": "#5c5b5b",
+                        "on-secondary-fixed-variant": "#565c62",
+                        "surface-tint": "#5f5e5e",
+                        "surface-container-high": "#e5e9e6",
+                        "tertiary-fixed-dim": "#e6e6df",
+                        "surface-container-low": "#f2f4f2",
+                        "on-secondary": "#f5f9ff",
+                        surface: "#f9f9f7",
+                        "on-secondary-container": "#4c5258",
+                        "outline-variant": "#adb3b0",
+                        secondary: "#596066",
+                        "on-tertiary-container": "#5b5c57",
+                        "primary-fixed": "#e5e2e1",
+                        error: "#9f403d",
+                        "inverse-primary": "#ffffff",
+                        "surface-dim": "#d4dcd8",
+                        "inverse-on-surface": "#9c9d9b",
+                        "on-background": "#2d3432",
+                        "error-dim": "#4e0309",
+                        "surface-container-highest": "#dee4e0",
+                        "on-primary": "#faf7f6",
+                        "on-primary-container": "#525151",
+                        "primary-fixed-dim": "#d7d4d3",
+                        "error-container": "#fe8983",
+                        "tertiary-fixed": "#f4f4ed",
+                        "on-tertiary-fixed-variant": "#656761",
+                        "on-tertiary-fixed": "#494a45",
+                        "tertiary-container": "#f4f4ed",
+                        "inverse-surface": "#0c0f0e",
+                        "secondary-fixed-dim": "#cfd5dc",
+                        "primary-dim": "#535252",
+                        outline: "#767c79",
+                        "on-secondary-fixed": "#3a4046",
+                        "on-primary-fixed": "#403f3f",
+                        "secondary-dim": "#4d545a",
+                        "on-error-container": "#752121",
+                        primary: "#5f5e5e",
+                        "secondary-fixed": "#dde3ea",
+                        background: "#f9f9f7",
+                        "tertiary-dim": "#52544e",
+                        "on-error": "#fff7f6",
+                        "on-tertiary": "#f9f9f2",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#dde3ea",
+                        "on-surface-variant": "#5a605e"
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                        lg: "2rem",
+                        xl: "3rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Source Serif Four"],
+                        body: ["Inter"],
+                        label: ["Inter"],
+                        display: "Source Serif Four"
+                    }
+                }
+            }
+        };
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .palette-button.active {
+            box-shadow: 0 0 0 1px #2d3432, 0 0 0 4px white;
+        }
+
+        #in-use-slider {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-fixed-dim selection:text-on-secondary-fixed overflow-x-hidden">
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/70 dark:bg-stone-950/70 backdrop-blur-md border-b border-stone-200/10">
+<div class="flex justify-between items-center w-full px-12 py-8 max-w-[1440px] mx-auto">
+<div class="text-2xl font-light tracking-[0.3em] text-stone-800 dark:text-stone-100 uppercase" style="">GOYO</div>
+<nav class="hidden md:flex items-center space-x-12">
+<a class="Inter text-[13px] tracking-[0.15em] font-light uppercase text-stone-400 dark:text-stone-600 hover:text-stone-900 dark:hover:text-stone-50 transition-all duration-500 ease-in-out" href="#" style="">About</a>
+<a class="Inter text-[13px] tracking-[0.15em] font-light uppercase text-stone-400 dark:text-stone-600 hover:text-stone-900 dark:hover:text-stone-50 transition-all duration-500 ease-in-out" href="#" style="">Technology</a>
+<a class="Inter text-[13px] tracking-[0.15em] font-light uppercase text-stone-400 dark:text-stone-600 hover:text-stone-900 dark:hover:text-stone-50 transition-all duration-500 ease-in-out" href="#" style="">Gallery</a>
+<a class="Inter text-[13px] tracking-[0.15em] font-light uppercase text-stone-400 dark:text-stone-600 hover:text-stone-900 dark:hover:text-stone-50 transition-all duration-500 ease-in-out" href="#" style="">Systems</a>
+</nav>
+<button class="Inter text-[13px] tracking-[0.15em] font-light uppercase text-stone-800 dark:text-stone-100 border border-stone-800 dark:border-stone-100 px-6 py-2 hover:bg-stone-800 hover:text-stone-100 transition-colors duration-500 rounded-full" style="">
+                Inquire
+            </button>
+</div>
+</header>
+<main>
+<!-- HERO Section -->
+<section class="relative h-screen w-full overflow-hidden flex items-center">
+<div class="absolute inset-0 z-0">
+<img alt="GOYO Device" class="w-full h-full object-cover" data-alt="Minimalist soft blue Goyo patch on a clean architectural pedestal under cinematic natural light" src="https://lh3.googleusercontent.com/aida/ADBb0ug45nmzhkNBuk68hIjR6HJ8w9meVoxw96ngwil1_Fy9nkI-H8RmvpVa-2lJ24bv9IlX_LE6i9ntMLPshyvIdu8kseUZo9AClRZWutRRBHsS4nKuucddHYACgItBQrfuQzH4CeybWmb2A20G6arnkMDjAjZIQ6tVbLorMGi6Ib6BbdiqCqc-beImQNkZVm4vnS0bvKLKIoBfC-S7-r2ARqB00vIwCp5X-SrStUf5G4ymRNEoJyfNqpWFn6zS5o12y-yCuCybSzOdgRs" style="">
+<div class="absolute inset-0 bg-black/5"></div>
+</div>
+<div class="relative z-10 w-full max-w-[1440px] mx-auto px-12 md:px-24">
+<div class="max-w-2xl space-y-16">
+<h1 class="leading-[0.8] font-light -ml-2 text-white text-[100px] md:text-[150px] tracking-[0.2em]" style="font-family: &quot;NewYork PERSONAL USE&quot;, &quot;Noto Serif&quot;, serif; font-weight: 300; letter-spacing: 0.15em; line-height: 1.1;">Goyo</h1>
+<p class="text-xl md:text-2xl font-light text-stone-800/80 leading-relaxed" style="">실시간 생체 데이터를 안심으로 전환하는 패치형 웨어러블</p>
+<div class="pt-12">
+<div class="w-16 h-16 border border-stone-900/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-stone-900/40" style="">keyboard_arrow_down</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ABOUT Section -->
+<section class="relative py-40 bg-surface overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hands holding Goyo devices" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uirh265fA7vPlyDNICCT6Co-13CXfq3y7wNRKpRxORXtIZFnlFOJIl51A0-2CINRgttwZX65U_DYwgdibSAbanFPLxJgH4GBJgMiZnJM2PPvo8ECwkUZyNV4iZvDeNs_-RX-w4MMXBVpAElqC6R-_IfodJQSQWf7D33PaBYXC47jvM5VBZQmj4mZlUKYaNbjQKuLo5moyYz80XLBuPVVpXeO2ZSGPyOHka0pWtiwG784wnROYZU571Z9ak7dE3FcyYpm6VBs5fGPQ" style="">
+</div>
+<div class="relative z-10 max-w-2xl mx-auto px-6 text-center">
+<div class="w-px h-24 bg-[#E3E3DC] mx-auto mb-16"></div>
+<h2 class="text-3xl mb-12 font-light leading-snug text-on-surface" style="">About</h2>
+<p class="text-on-surface font-light leading-relaxed mb-16" style="">
+                    매 순간 건강 수치를 확인해야만 안심이 되는 ‘데이터 의존의 시대’.
+                    <br>하지만 숫자가 사라지는 순간, 막연한 불안과 고립감은 더 커집니다.
+                    <br>고요는 그 공백을 감각적 신호로 채워 ‘안심’을 전달하는 패치형 웨어러블입니다.
+                </p>
+<div class="w-px h-24 bg-[#E3E3DC] mx-auto"></div>
+</div>
+</section>
+<!-- CORE TECHNOLOGIES Section -->
+<section class="py-40 px-12 bg-surface-container-low">
+<div class="max-w-[1440px] mx-auto">
+<div class="flex flex-col items-center mb-24 space-y-4">
+<h2 class="text-4xl font-light text-center" style="">Core Technologies</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-20">
+<!-- Technology 1 -->
+<div class="group cursor-pointer text-center">
+<div class="mb-10 aspect-square overflow-hidden rounded-full border border-outline-variant/20 p-4">
+<img class="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-105" data-alt="Abstract macro photography of microscopic sensors, soft ethereal lighting, silver and white tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTMWy2kzcq8g-hUKcG5-ZstQHWPHH0kUapfEOC5XX3Uq76fRTpnmU4N1XeQlXI3He2RWcluyGKv6aWeA__w4aS7No-a4N9-Jlj9s18IGTAZOdECBZUb390f4eKhJugjM_Vi2oVkKgeW1r90VSVD1lT6zbp2iyIRAJBwMvbEeNsqUWBFjZydmepna0ximxh0L7Y_RJId9QU058kbhZCcyTFdlR9Fg0hXR0Mewn6yF2cXVxOqGYxr66d2XqsBpZzmg-irFyVCVE3aV3m" style="">
+</div>
+<h3 class="text-xl mb-4 font-medium transition-colors duration-500 group-hover:text-secondary-fixed-dim group-hover:scale-[1.02] origin-center" style="">Haptic Breathing</h3>
+<p class="text-on-surface-variant font-light text-sm leading-relaxed" style=""><b>와이어의 수축과 이완</b>을 통해 물리적인 호흡 리듬을 유도하며 사용자의 긴장을 완화합니다.</p>
+</div>
+<!-- Technology 2 -->
+<div class="group cursor-pointer text-center">
+<div class="mb-10 aspect-square overflow-hidden rounded-full border border-outline-variant/20 p-4">
+<img class="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-105" data-alt="Digital representation of clean data flow, minimalist lines and points on a neutral off-white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOKhmU-yKs6T_ff2z5If7VIldIIK8K41u9mFJVeXCf0PB656cjyu-S5NtH1speXk_JJzPlE1x7mZhck6TtnC0W4nWseE0rHVYCTw0Ivkk3LhEOFFX35CE7QO5C-C_ZRik2LAhIoJfJdem0HazqAEUIOx6ZkZiDCvzd1xKBHi-1v-8YQ4hB7QUF4FLIFSt92QanWyBFwjiO22gu1CJlPbMUqc4lzWQPauLEYTufpzEJ8RcFPD6KMYAXUNllfvwlxTCcceMcemycEVTW" style="">
+</div>
+<h3 class="text-xl mb-4 font-medium transition-colors duration-500 group-hover:text-secondary-fixed-dim group-hover:scale-[1.02] origin-center" style="">Physical Embossing</h3>
+<p class="text-on-surface-variant font-light text-sm leading-relaxed" style="">기기가 꺼지기 직전 <b>물리적 돌기가 돌출</b>되어, 생체 데이터를 촉각 신호로 변환해 전달합니다.</p>
+</div>
+<!-- Technology 3 -->
+<div class="group cursor-pointer text-center">
+<div class="mb-10 aspect-square overflow-hidden rounded-full border border-outline-variant/20 p-4">
+<img class="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist smartphone interface showing a soft pulse animation, calm and clean UI design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACHMO2AjIbUomUC3Rw8tluQFk7ABZ3RFlI1pzMLg8MRN-r2bpg5SwGnDL4v4VJT6bO1jOf8jliFIUFtXUPN_NMQPwXJM-yOUhUIgErQmSb3rExzqQcVe9q5it36cQ0W82nlnFHZ_Bvos_WjfBYKvzTK4BA3UNzK0HPrM5RNCIPHc204eCDyNk6uXeUF72eUISLuCXNNBH8zlTgpDVdLAXYVGaQ3vQTP2N-Yi1jcrNAOAvM90ymPGcRcaS82-PSxyeZZJqxRwCDDMGr" style="">
+</div>
+<h3 class="text-xl mb-4 font-medium transition-colors duration-500 group-hover:text-secondary-fixed-dim group-hover:scale-[1.02] origin-center" style="">Hot-Swap Battery</h3>
+<p class="text-on-surface-variant font-light text-sm leading-relaxed" style=""><b>자석 결합</b>을 통해 피부에서 패치를 뗄 필요 없이 배터리 모듈만 신속하게 교체합니다.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- IN USE Section (Horizontal Scroll Gallery) -->
+<section class="py-40 bg-surface overflow-hidden">
+<div class="px-12 mb-16 max-w-[1440px] mx-auto flex justify-between items-end">
+<h2 class="text-4xl font-light" style="">In Use</h2>
+<div class="hidden md:flex space-x-4 mb-1">
+<button class="w-10 h-10 border border-stone-200 flex items-center justify-center rounded-full hover:bg-stone-800 hover:text-white transition-colors duration-300" id="slider-prev" style="">
+<span class="material-symbols-outlined text-sm" style="">west</span>
+</button>
+<button class="w-10 h-10 border border-stone-200 flex items-center justify-center rounded-full hover:bg-stone-800 hover:text-white transition-colors duration-300" id="slider-next" style="">
+<span class="material-symbols-outlined text-sm" style="">east</span>
+</button>
+</div>
+</div>
+<div class="flex space-x-12 px-12 overflow-x-auto hide-scrollbar snap-x snap-mandatory" id="in-use-slider">
+<div class="snap-center shrink-0 w-[450px] md:w-[700px] aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0ujsJmlH6hXJ9KLuJLnxwKA51A-G7orEeKYKx6TtKoT-w2CJq7xwnwVJo6iAigWVRcSQybM9MVwu3aGuhJaV0qtn0zfOxwDNv5qGLjkOizgB_78Hyc8Gd70kBafDQotyD893-xVbj2AkujSX1tI7W-uh8sebG2lH0z8lzVUecgblwFJ1iMaxG34zqJOM3bbErOigt8vjGOOgsW7QRS2vbEXtHA2-0_wI7m1RnRhXRSId411sZJzRq1qe7n3nlOFvBXK3lLTJF1JeBQ" style="">
+</div>
+<div class="snap-center shrink-0 w-[450px] md:w-[700px] aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0ujQVTPin9vmuy3Q64dp27lgn1tlrdJiCJqwmRx9HiYfopVgaguUfYLIyRh-uavJhn9iuPRH2WGPXI4l1Er2IP8twrYqyNeR1yTZ443tliPwFP96aR2exyuCRa9MBA9lcd6gdzXTOcW0Aw5fQH28scLdY_Gvlzo3XRfYEEGKjQCVahswiwLG1w_lTRRMC0RWUTfbGgLd8QuCLtCnRhJKshOhz2dGyULJdikdw4NNU55QufJrBFd0hjF78BeLqQ7wtLXsplc7-SsdBQ" style="">
+</div>
+<div class="snap-center shrink-0 w-[450px] md:w-[700px] aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0uhnNKsuRKOVdkWgbs0GLAZQNitjpWnmAxsyezURPTSJiNeTgnUpBWjbxGK1EvogimpeviyYkyo_Xjaqnhwvg096Uc4PpJ4sFBJP7heR3Gyap3jdcke1AkAn1HS2HNbF1ZAL-KCpal5QL5ayYrBaWIx4Ro2tKhvSduJYwpHa3zQmKM04zKCtDUxmo5EKfd-paSIkeJt00mcIc6ImHr9Q2KxmfRuzS48fM3BtEObcHPcCOJHo2CcNSlk0uaDgM-CS29f4WbXlWS90fxI" style="">
+</div>
+<div class="snap-center shrink-0 w-[450px] md:w-[700px] aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0ujkeosGLLbXtg7vKFrbTECwqgV-9x3UBC-1R2BSW523_8VljQMGNaZkDfsJLuZeYjctFBtLvTGQfFb-zVEVRjCRBa3Xdap2ZXAXVGlhtM137JD_uxCEkvajydEL8PpU4y0a1yTRyosY68AcbWPketBDo8sO8IVDgI6300xA-lUOAwMo5Fse_rPxyFtLPmZ0nfh-WOUv48XTOeA-6m1X_vrcfv1cC2WVmBH0301cGC4MSjsUzslAIG85sR4EEJG7DhGwWHlsGW7Q3g" style="">
+</div>
+<div class="snap-center shrink-0 w-[450px] md:w-[700px] aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0uijoWho2mlAzYD4fD4dMS13qgOSgKgYlmfiekdpTWHe8Tlxhh5W60lGFiwlvzcoNTqCb5WUrrUhhUz15NITpVqi_OGyKKAjuXIzgyLcdDNuqsTKRpJ7UFwJLbbh7dhcldq9CdOSdnGiuavgny9vGBHdKQ_JP0MBuoZgXwkLYwU6TxcQhDqWtauUGIZ3All44ZAvvPFAtruDPRYmKh6XlOlV9I6e28HgmOlZuEYNa3YBACykLsCoFL2z4_U4PE9iTlCFfiPgXKLbmA" style="">
+</div>
+<!-- Extra padding div for end of scroll -->
+<div class="shrink-0 w-12"></div>
+</div>
+<div class="max-w-[1440px] mx-auto px-12 mt-12">
+<div class="flex items-center space-x-4 w-full">
+<div class="h-[1px] bg-[#E3E3DC] flex-grow relative overflow-hidden">
+<div class="absolute top-0 left-0 w-0 h-full bg-stone-400 transition-all duration-300" id="slider-progress" style="width: 0%;"></div>
+</div>
+<div class="flex space-x-2">
+<span class="Inter text-[10px] tracking-widest text-stone-400" id="current-slide" style="">01</span>
+<span class="Inter text-[10px] tracking-widest text-stone-300" style="">/</span>
+<span class="Inter text-[10px] tracking-widest text-stone-300" style="">05</span>
+</div>
+</div>
+</div>
+</section>
+<!-- COLOR SYSTEM Section (Personal Palette) -->
+<section class="py-40 bg-surface-container-lowest" id="personal-palette">
+<div class="max-w-[1440px] mx-auto px-12 grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="relative group">
+<div class="aspect-[1120/928] bg-surface-container-low overflow-hidden">
+<img alt="Goyo product color variation" class="w-full h-full object-cover transition-opacity duration-700" id="palette-display-image" src="https://lh3.googleusercontent.com/aida/ADBb0ujkrl7XT-3FYYOB6oUx5IueL35irrk7wXdcl1a5TKXpMp-hmdihuzkMUfibSIRiHWcOaVUsbKirVaIetzjoKmYP0E1h4UfL6PtCOOwnCLRXamGsABoq_xaVCBTGcepMdd-bK-lyMhcrY7Q27dXKN1ehLto85JYk2U_uD_pnapUmLvexXDi_YNWOSQamxj92Zzo4MZt9cZuYbDEgUOeb64OQ3SnGKh8PyXpF6WFSmYD4ivRBxs6th_yITQIm8l0ICQm3P5CFtnIENqA" style="">
+</div>
+</div>
+<div>
+<h2 class="text-4xl font-light mb-8" style="">Color System</h2>
+<p class="text-on-surface-variant font-light mb-12 max-w-md leading-relaxed" style=""><p data-start="299" data-end="370">고요의 컬러는 저채도의 뮤트 톤을 기반으로,<br data-start="335" data-end="338">
+신뢰와 감각, 그리고 안정의 흐름을 시각적으로 담아냅니다.</p></p>
+<div class="grid grid-cols-3 sm:grid-cols-6 gap-y-8 gap-x-4 items-start">
+<div class="flex flex-col items-center space-y-3">
+<button class="palette-button w-12 h-12 rounded-full active transition-all" data-img="https://lh3.googleusercontent.com/aida/ADBb0ujkrl7XT-3FYYOB6oUx5IueL35irrk7wXdcl1a5TKXpMp-hmdihuzkMUfibSIRiHWcOaVUsbKirVaIetzjoKmYP0E1h4UfL6PtCOOwnCLRXamGsABoq_xaVCBTGcepMdd-bK-lyMhcrY7Q27dXKN1ehLto85JYk2U_uD_pnapUmLvexXDi_YNWOSQamxj92Zzo4MZt9cZuYbDEgUOeb64OQ3SnGKh8PyXpF6WFSmYD4ivRBxs6th_yITQIm8l0ICQm3P5CFtnIENqA" style="background-color: rgb(121, 170, 188);"></button>
+<span class="Inter text-[10px] tracking-widest font-light uppercase text-center" style="">Muted Sky Blue</span>
+</div>
+<div class="flex flex-col items-center space-y-3">
+<button class="palette-button w-12 h-12 rounded-full hover:ring-1 hover:ring-on-surface/20 transition-all" data-img="https://lh3.googleusercontent.com/aida/ADBb0ui2vO4vEunYhT902l3rI7Gisv49Xm_10B-u4tWp5U-0p5UvT9S7A9pGzNn3ZtG-m5L5uS7u9N9" style="background-color: rgb(121, 170, 188);"></button>
+<span class="Inter text-[10px] tracking-widest font-light uppercase text-on-surface-variant text-center" style="">Dusty Lavender</span>
+</div>
+<div class="flex flex-col items-center space-y-3">
+<button class="palette-button w-12 h-12 rounded-full hover:ring-1 hover:ring-on-surface/20 transition-all" data-img="https://lh3.googleusercontent.com/aida/ADBb0uj_v3q_v3q_v3q_v3q_v3q_v3q_v3q_v3q_v3q_v3q_v3q_v3q_v3q_v3q_v3q_v3q" style="background-color: rgb(205, 138, 140);"></button>
+<span class="Inter text-[10px] tracking-widest font-light uppercase text-on-surface-variant text-center" style="">Muted Coral Pink</span>
+</div>
+<div class="flex flex-col items-center space-y-3">
+<button class="palette-button w-12 h-12 rounded-full hover:ring-1 hover:ring-on-surface/20 transition-all" data-img="https://lh3.googleusercontent.com/aida/ADBb0uh_v4q_v4q_v4q_v4q_v4q_v4q_v4q_v4q_v4q_v4q_v4q_v4q_v4q_v4q_v4q_v4q" style="background-color: rgb(210, 139, 74);"></button>
+<span class="Inter text-[10px] tracking-widest font-light uppercase text-on-surface-variant text-center" style="">Burnt Orange</span>
+</div>
+<div class="flex flex-col items-center space-y-3">
+<button class="palette-button w-12 h-12 rounded-full hover:ring-1 hover:ring-on-surface/20 transition-all" data-img="https://lh3.googleusercontent.com/aida/ADBb0uh_v5q_v5q_v5q_v5q_v5q_v5q_v5q_v5q_v5q_v5q_v5q_v5q_v5q_v5q_v5q_v5q" style="background-color: rgb(99, 71, 60);"></button>
+<span class="Inter text-[10px] tracking-widest font-light uppercase text-on-surface-variant text-center" style="">Deep Cocoa Brown</span>
+</div>
+<div class="flex flex-col items-center space-y-3">
+<button class="palette-button w-12 h-12 rounded-full hover:ring-1 hover:ring-on-surface/20 transition-all" data-img="https://lh3.googleusercontent.com/aida/ADBb0uh_v6q_v6q_v6q_v6q_v6q_v6q_v6q_v6q_v6q_v6q_v6q_v6q_v6q_v6q_v6q_v6q" style="background-color: rgb(114, 113, 114);"></button>
+<span class="Inter text-[10px] tracking-widest font-light uppercase text-on-surface-variant text-center" style="">Neutral Gray</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // Color Palette Logic
+                const buttons = document.querySelectorAll('.palette-button');
+                const displayImage = document.getElementById('palette-display-image');
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const newSrc = button.getAttribute('data-img');
+                        displayImage.style.opacity = '0';
+                        setTimeout(() => {
+                            displayImage.src = newSrc;
+                            displayImage.style.opacity = '1';
+                        }, 300);
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                    });
+                });
+
+                // Horizontal Slider Logic
+                const slider = document.getElementById('in-use-slider');
+                const prevBtn = document.getElementById('slider-prev');
+                const nextBtn = document.getElementById('slider-next');
+                const progressBar = document.getElementById('slider-progress');
+                const currentSlideTxt = document.getElementById('current-slide');
+                
+                const updateSliderUI = () => {
+                    if (!slider) return;
+                    const scrollLeft = slider.scrollLeft;
+                    const maxScroll = slider.scrollWidth - slider.clientWidth;
+                    const progress = maxScroll > 0 ? (scrollLeft / maxScroll) * 100 : 0;
+                    if (progressBar) progressBar.style.width = `${progress}%`;
+                    
+                    const slides = slider.querySelectorAll('.snap-center');
+                    if (slides.length > 0) {
+                        const slideWidth = slides[0].offsetWidth + 48; // width + gap
+                        const currentIdx = Math.round(scrollLeft / slideWidth);
+                        if (currentSlideTxt) currentSlideTxt.textContent = (currentIdx + 1).toString().padStart(2, '0');
+                    }
+                };
+
+                slider.addEventListener('scroll', updateSliderUI);
+
+                nextBtn.addEventListener('click', () => {
+                    const slides = slider.querySelectorAll('.snap-center');
+                    const slideWidth = slides[0].offsetWidth + 48;
+                    slider.scrollBy({ left: slideWidth, behavior: 'smooth' });
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    const slides = slider.querySelectorAll('.snap-center');
+                    const slideWidth = slides[0].offsetWidth + 48;
+                    slider.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+                });
+
+                // Initial UI set
+                updateSliderUI();
+            });
+        </script>
+<!-- DETAIL Section -->
+<section class="py-40 px-12 bg-surface">
+<div class="max-w-[1440px] mx-auto">
+<h2 class="text-4xl font-light mb-20 text-center serif" style="">Detail</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Row 1 -->
+<div class="overflow-hidden">
+<img class="w-full aspect-square object-cover grayscale transition-transform duration-700 hover:scale-105" data-alt="Micro detail of electronic circuit on flexible substrate, metallic sheen, dark moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9esxbxrwP2rUREi-Mw6s0O--TlqkocHAgn0DF1on23mECZHoQI4FLkFCPREPyPjBrg1vYTCDQii-10j0UCHCVrJ4pTs75ilT-Sfpve-DOuFyOc1OCgbaFhFqCMFExpRcaExIiRCRY74G854kVWcdCMsXFPjVQPlzolhRJbjsuWfZDEgsLVDWe9YX9p03A-o8oOlHiQ_ik5gqLm19CasPcrrZhDAbk-iK61cbAOaWrO1XZc9JQ4ZxCRScgF9TbnJmPDwsJY1k7Ubju" style="">
+</div>
+<div class="overflow-hidden">
+<img class="w-full aspect-square object-cover grayscale transition-transform duration-700 hover:scale-105" data-alt="Soft light hitting an abstract paper sculpture, delicate textures, shadows and highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQd5fAFgy7uYJfL_5z-H7cD-H6rHU8uwHoylqykSwj0Ti2F2FgfzQ1NdAmreyXDUJU90btZz9MbLCqQkQV6xnAJFGrmN_rpO1pGdpFhp5jBRRL9PzFMGYXgAuwaTtGfqbl6aT1fvamt0V5wTLr22wp_lUrWWbhhf1SRxCLQlzuZAW_U8-jdq5b2ITW-78XefBozD4jUenlzXfR09YYLRCkVgLsHAMuHyozFtBaHmgeQ2SbYexrAwyIvwgso2vTf6tChbp3w0X4Vf69" style="">
+</div>
+<div class="overflow-hidden">
+<img class="w-full aspect-square object-cover grayscale transition-transform duration-700 hover:scale-105" data-alt="Minimalist bedside table with a charging base and soft ambient lamp light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzuNfAp0y6mdc002vw6UbfCA_63CqPm-GlxDhNfqQC4USyN_m3EMMNrzPBgrSrIe_p5iMWVVYLuXP66ni4LD6y6qkQCbLKtHvh_9Bn-dn_wZKcjaprXfJKdEwPc0LOIk5iOd8OYsWHhtL6aR9nnIo4iWlQ-0aIR4aJKTnPrtChIpxyvPG2ISXBvhR7dSxwavWQkTCvhdTMxpq4WlntInhftssmoCKjdvOjscqNqgb67jov6mxVzMuH1qBdTocmBO89kPO54KJwqT2E" style="">
+</div>
+<!-- Row 2 -->
+<div class="overflow-hidden">
+<img class="w-full aspect-square object-cover grayscale transition-transform duration-700 hover:scale-105" data-alt="Abstract close-up of soft textile texture with organic folds, high contrast monochrome" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB7tBvWdFfG2H7K0L9M6n8P9R3E1vC5k-2mF7V4G8H9I0J1K2L3M4N5O6P7Q8R9S0T1U2V3W4X5Y6Z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y2z3A4B5C6D7E8F9G0H1I2J3K4L5M6N7O8P9Q0R1S2T3U4V5W6X7Y8Z9a0b1c2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w2x3y4z" style="">
+</div>
+<div class="overflow-hidden">
+<img class="w-full aspect-square object-cover grayscale transition-transform duration-700 hover:scale-105" data-alt="Minimalist architectural corner with dramatic shadows and clean lines, zen aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC7tD8E9F0G1H2I3J4K5L6M7N8O9P0Q1R2S3T4U5V6W7X8Y9Z0a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6A7B8C9D0E1F2G3H4I5J6K7L8M9N0O1P2Q3R4S5T6U7V8W9X0Y1Z2a3b4c5d6e7f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7z8A9B0C1D2E3F4G5H6I7J8K9L0M1N2O3P4Q5R6S7T8U9V0W1X2Y3Z4a5b6c7d8e9f0g1h2i3j4k5l6m7n8o9p0q1r2s3t4u5v6w7x8y9z" style="">
+</div>
+<div class="overflow-hidden">
+<img class="w-full aspect-square object-cover grayscale transition-transform duration-700 hover:scale-105" data-alt="Macro of a single drop of water on a smooth matte surface, perfect tension and clarity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD8tF9G0H1I2J3K4L5M6N7O8P9Q0R1S2T3U4V5W6X7Y8Z9a0b1c2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w2x3y4z5A6B7C8D9E0F1G2H3I4J5K6L7M8N9O0P1Q2R3S4T5U6V7W8X9Y0Z1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7A8B9C0D1E2F3G4H5I6J7K8L9M0N1O2P3Q4R5S6T7U8V9W0X1Y2Z3a4b5c6d7e8f9g0h1i2j3k4l5m6n7o8p9q0r1s2t3u4v5w6x7y8z9a0b1c2d3e4f5g6h7i8j9k" style="">
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[#f9f9f7] dark:bg-stone-950 border-t border-stone-200/30">
+<div class="max-w-[1440px] mx-auto px-12 py-16 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+<div class="text-sm font-medium tracking-widest text-stone-800 dark:text-stone-200 uppercase" style="">GOYO</div>
+<div class="Inter text-[10px] tracking-[0.2em] font-light uppercase text-stone-600 dark:text-stone-400" style="">
+                © 2024 GOYO. THE ARCHITECTURE OF SILENCE.
+            </div>
+<nav class="flex space-x-8">
+<a class="Inter text-[10px] tracking-[0.2em] font-light uppercase text-stone-400 dark:text-stone-600 hover:text-stone-800 dark:hover:text-stone-200 transition-colors duration-700" href="#" style="">Privacy</a>
+<a class="Inter text-[10px] tracking-[0.2em] font-light uppercase text-stone-400 dark:text-stone-600 hover:text-stone-800 dark:hover:text-stone-200 transition-colors duration-700" href="#" style="">Terms</a>
+<a class="Inter text-[10px] tracking-[0.2em] font-light uppercase text-stone-400 dark:text-stone-600 hover:text-stone-800 dark:hover:text-stone-200 transition-colors duration-700" href="#" style="">Institutional</a>
+</nav>
+</div>
+</footer>
+</body></html>
